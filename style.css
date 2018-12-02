@@ -108,24 +108,24 @@ notebook/pc:
 }
 
 @media (min-width:480px){
-   .doporucujeme{
-       width: 800px;
-   } 
 
    .sloupec{
        display: flex;
        flex-direction: column;
        float: left;
+       width: 50%;
+        /* flex-direction: row; */
    }
 
+  
    .hlavni-recept{
         min-height: 250px; 
         padding: 20px;
+        
    }
 
-   .recept{
+   .recept{      
         min-height: 150px;
-        width: 398px;
         padding: 20px;
     }
 
@@ -156,6 +156,7 @@ notebook/pc:
 
     .recept{
         min-height: 200px;
+        width: 400px;
     }
 
     .recept-nazev{
