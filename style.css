@@ -46,12 +46,22 @@ notebook/pc:
 
 .hlavni-recept{
     background:  url("images/burger.jpg") no-repeat;
-    min-height: 200px;
-    background-position: center;
-    background-size: cover; 
+    min-height: 200px;    
     margin: 1px;
     padding: 10px;
     position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.recept::before{
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left:0;
+    background-color: rgba(0, 0, 0, 0.3)
 }
 
 .recept{
@@ -108,20 +118,21 @@ notebook/pc:
 }
 
 @media (min-width:480px){
-
-   .sloupec{
+    .doporucujeme{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .sloupec{
        display: flex;
        flex-direction: column;
-       float: left;
        width: 50%;
-        /* flex-direction: row; */
-   }
-
+   } 
   
    .hlavni-recept{
         min-height: 250px; 
         padding: 20px;
-        
+        width: 100%;
    }
 
    .recept{      
@@ -137,26 +148,28 @@ notebook/pc:
     .hlavni-recept .recept-nazev{
         font-size: 36px;
     }
-    
-    .paticka{
-        clear: both;
-    }
+ 
 }
 
 @media (min-width:860px){
     .doporucujeme{
         display: flex;
-        width: 100%;
+        /* flex-direction: row; */
+    }
+
+    .sloupec{
+        flex-direction: column;
+        width: 33%;
     }
 
     .hlavni-recept{
         min-height: 400px;
-        width: 400px;
+        width: 33%;
     }
 
     .recept{
         min-height: 200px;
-        width: 400px;
+        /* width: 400px; */
     }
 
     .recept-nazev{
